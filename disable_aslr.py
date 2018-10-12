@@ -37,6 +37,6 @@ if __name__ == '__main__':
     if changed:
         new_path = '{orig_exe}-patched.exe'.format(orig_exe=path)
         pe.write(filename=new_path)
-        logger.info('updated file written. verifying ASLR has been disabled)
+        logger.info('updated file written. verifying ASLR has been disabled')
         pe = PE(new_path)
         get_pe_aslr_status(pe)
