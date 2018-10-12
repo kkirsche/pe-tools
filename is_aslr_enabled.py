@@ -18,7 +18,7 @@ def get_pe_aslr_status(pe):
     DYNAMIC_BASE = 0x40
     is_aslr = pe.OPTIONAL_HEADER.DllCharacteristics & DYNAMIC_BASE
     if is_aslr:
-        logger.warning('the binary has ASLR enabled! Attempting to disable')
+        logger.warning('the binary has ASLR enabled!')
     else:
         logger.info('the binary does not have ASLR enabled')
 
